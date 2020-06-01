@@ -1,0 +1,14 @@
+{
+    "defaultCommandTimeout": 15000,
+    "pageLoadTimeout":15000,
+    "requestTimeout":15000,
+    "responseTimeout":15000,
+
+    "baseUrl": "https://qa.useriq.com/users/sign_in",
+    "env": {
+      "username": "akhil.manjunath@useriq.com",
+      "password": "Akhil2020@"
+    }
+  }
+
+
