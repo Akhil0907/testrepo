@@ -22,7 +22,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
 
     })
 
-    it('Verify Named Feature Navigation is wokring fine ', () => {
+    it('Verify Named Feature creation is working fine ', () => {
      
         const namedFeature = new NamedFeature
         cy.url().should('include', '/#/home') 
@@ -45,8 +45,8 @@ describe('Verify the useriq web dashbord is working fine', () => {
          var result2 = 'akhil_namedfeature' + result
          return result2;
           }
-       var namedFeature = randomString(5)
-       namedFeature.featureNameInput().type(namedFeature)
+       var namedFeatures = randomString(5)
+       namedFeature.featureNameInput().type(namedFeatures)
 
        //Select a value from drop down
        namedFeature.featureSelectionDropdown().click()
