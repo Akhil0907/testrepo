@@ -1,7 +1,6 @@
 /// <reference types="Cypress" />
-import NamedFeature from '../pageObjects/NamedFeature'
-import Campaigns from '../pageObjects/Campaigns'
-describe('Verify the useriq web dashbord is working fine', () => {
+import NamedFeature from '../../../pageObjects/namedFeature'
+describe.skip('Verify the useriq web dashbord is working fine', () => {
     
     
     before(() => {   

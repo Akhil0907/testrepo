@@ -1,14 +1,12 @@
 {
-    "defaultCommandTimeout": 15000,
-    "pageLoadTimeout":15000,
-    "requestTimeout":15000,
-    "responseTimeout":15000,
-
-    "baseUrl": "https://qa.useriq.com/users/sign_in",
-    "env": {
-      "username": "akhil.manjunath@useriq.com",
-      "password": "Akhil2020@"
-    }
-  }
-
-
+  "defaultCommandTimeout": 25000,
+  "pageLoadTimeout": 25000,
+  "requestTimeout": 25000,
+  "responseTimeout": 25000,
+  "baseUrl": "https://qa.useriq.com/users/sign_in",
+  "env": {
+    "username": "akhil.manjunath@useriq.com",
+    "password": "Akhil2020@"
+  },
+  "projectId": "jdisi6"
+}

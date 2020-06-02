@@ -1,0 +1,31 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "cypress e2e and smoke test scripts",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest":"npm run test -- --headed",
+    "chromeTest":"npm run test -- --browser chrome",
+    "smokeTest": "npm run test -- --spec cypress/integration/Smoke/**/*",
+    "regressionTest": "npm run test -- --spec cypress/integration/Regression/**/*",
+    "campaignsRegressionTest": "npm run test -- --spec cypress/integration/Regression/Campaigns/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akhil0907/testrepo.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "akhil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akhil0907/testrepo/issues"
+  },
+  "homepage": "https://github.com/Akhil0907/testrepo#readme"
+}
