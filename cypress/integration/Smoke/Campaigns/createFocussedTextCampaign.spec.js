@@ -25,7 +25,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
 
     })
 
-    it('Smoke:-Create a simple campaign ', () => {
+    it('Smoke:-Create a simple focussed text campaign ', () => {
      
         const simpleCampaigns = new SimpleCampaigns()
         
