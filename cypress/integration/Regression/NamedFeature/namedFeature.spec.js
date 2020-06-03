@@ -1,13 +1,15 @@
 /// <reference types="Cypress" />
 import NamedFeature from '../../../pageObjects/regression/namedFeature'
 import WebuiNavLink from '../../../pageObjects/navUrl/navLinks'
+
+
 describe('Verify the useriq web dashbord is working fine', () => {
     
     
     before(() => {   
        
-       const username = Cypress.env('username')
-       const password = Cypress.env('password')
+       const username = Cypress.env('uname1')
+       const password = Cypress.env('password1')
 
        //clear the cookies before login
        cy.clearCookies()
@@ -26,6 +28,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
      
         const namedFeature = new NamedFeature
         const webuiNavLink = new WebuiNavLink
+
         cy.url().should('include', '/#/home') 
         //navigating to creaating named feature 
         cy.contains("Intelligence").click({force:true});
@@ -46,6 +49,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
          var result2 = 'akhil_namedfeature' + result
          return result2;
           }
+
        var namedFeatures = randomString(5)
        namedFeature.featureNameInput().type(namedFeatures)
 

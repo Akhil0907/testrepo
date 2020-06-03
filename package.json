@@ -6,11 +6,13 @@
   "dependencies": {
     "cypress": "^4.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cypress-xpath": "^1.6.0"
+  },
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
-    "headTest":"npm run test -- --headed",
-    "chromeTest":"npm run test -- --browser chrome",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
     "smokeTest": "npm run test -- --spec cypress/integration/Smoke/**/*",
     "regressionTest": "npm run test -- --spec cypress/integration/Regression/**/*",
     "campaignsRegressionTest": "npm run test -- --spec cypress/integration/Regression/Campaigns/**/*"
