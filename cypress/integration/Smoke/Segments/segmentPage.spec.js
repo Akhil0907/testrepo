@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import Segment from '../../../pageObjects/segmentPage'
+import Segment from '../../../pageObjects/smoke/segmentPage'
 describe('Segmentpage smoke test case', () => {
     
     

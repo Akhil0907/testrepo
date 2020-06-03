@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import Campaigns from '../../../pageObjects/createCampaigns'
+import Campaigns from '../../../pageObjects/regression/createCampaigns'
 describe('Verify the useriq web dashbord is working fine', () => {
     
     
@@ -32,6 +32,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
        cy.contains('Campaigns').should('be.visible').click({force:true})
 
        campaigns.getCreateCampaignButton().should('not.be.disabled').click({force: true})
+       //Cypress.config(defaultCommandTimeout,5000);
 
        
     })

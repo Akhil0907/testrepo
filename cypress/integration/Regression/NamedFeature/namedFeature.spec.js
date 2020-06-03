@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
-import NamedFeature from '../../../pageObjects/namedFeature'
-describe.skip('Verify the useriq web dashbord is working fine', () => {
+import NamedFeature from '../../../pageObjects/regression/namedFeature'
+import WebuiNavLink from '../../../pageObjects/navUrl/navLinks'
+describe('Verify the useriq web dashbord is working fine', () => {
     
     
     before(() => {   
@@ -24,6 +25,7 @@ describe.skip('Verify the useriq web dashbord is working fine', () => {
     it('Verify Named Feature creation is working fine ', () => {
      
         const namedFeature = new NamedFeature
+        const webuiNavLink = new WebuiNavLink
         cy.url().should('include', '/#/home') 
         //navigating to creaating named feature 
         cy.contains("Intelligence").click({force:true});
@@ -51,7 +53,7 @@ describe.skip('Verify the useriq web dashbord is working fine', () => {
        namedFeature.featureSelectionDropdown().click()
        cy.contains('pageview').trigger('mousemove').click()
        //Save the named feature
-       namedFeature.featureUrlInput().type('https://qa.useriq.com/#/home')
+       namedFeature.featureUrlInput().type(webuiNavLink.namedFeatureUrl())
        namedFeature.saveNameFeatureButton().click();
     })
        
