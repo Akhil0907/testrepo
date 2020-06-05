@@ -4,7 +4,8 @@
   "description": "cypress e2e and smoke test scripts",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^4.7.0"
+    "cypress": "^4.7.0",
+    "randomstring": "^1.1.5"
   },
   "devDependencies": {
     "cypress-xpath": "^1.6.0"
@@ -14,8 +15,8 @@
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome",
     "smokeTest": "npm run test -- --spec cypress/integration/Smoke/**/*",
-    "regressionTest": "npm run test -- --spec cypress/integration/Regression/**/*",
-    "campaignsRegressionTest": "npm run test -- --spec cypress/integration/Regression/Campaigns/**/*"
+    "acceptanceTest": "npm run test -- --spec cypress/integration/Acceptance/**/*",
+    "FunctionalTest": "npm run test -- --spec cypress/integration/Functional/**/*"
   },
   "repository": {
     "type": "git",

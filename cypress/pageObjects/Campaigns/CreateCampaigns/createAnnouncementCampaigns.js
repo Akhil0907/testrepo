@@ -23,7 +23,31 @@ class SimpleCampaigns
         return cy.xpath("//*[@id='toolbar']/div[2]/div/div/div[2]/div/div")
    }
  
+   focussedBullets()
+   {
 
+      return cy.xpath("//*[@id='toolbar']/div[2]/div/div/div[3]/div/div")
+   }
+
+   detailedBullets()
+   {
+
+      return cy.xpath("//*[@id='toolbar']/div[2]/div/div/div[4]/div/div")
+   }
+   
+   detailedTwoBlock()
+
+   {
+      return cy.xpath("//*[@id='toolbar']/div[2]/div/div/div[5]/div/div")
+      
+   }
+
+   detailedFourBlock()
+
+   {
+      return cy.xpath("//*[@id='toolbar']/div[2]/div/div/div[5]/div/div")
+      
+   }
    selectCampaignItems()
    {
 

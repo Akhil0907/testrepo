@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import SimpleCampaigns from '../../../pageObjects/smoke/createSimpleCampaigns'
+import SimpleCampaigns from '../../../pageObjects/Campaigns/CreateCampaigns/createAnnouncementCampaigns'
 describe('Verify the useriq web dashbord is working fine', () => {
     
     
@@ -25,10 +25,11 @@ describe('Verify the useriq web dashbord is working fine', () => {
 
     })
 
-    it('Create a simple campaign ', () => {
+    it('Smoke:-Create a simple campaign ', () => {
      
         const simpleCampaigns = new SimpleCampaigns()
-
+        
+        //clearing old campaign popups
         cy.contains('Ok').click()
 
         cy.contains('Campaigns').click({force:true})
@@ -41,7 +42,11 @@ describe('Verify the useriq web dashbord is working fine', () => {
         simpleCampaigns.simpleText().should('be.visible').click()
         
         //content tab
-        simpleCampaigns.selectCampaignItems().eq(0).should('not.be.disabled').click().type('akhil_smoke_test02')
+
+        var randomstring = require("randomstring");
+        var randomName = randomstring.generate(5);
+
+        simpleCampaigns.selectCampaignItems().eq(0).should('not.be.disabled').click().type('simpleCampaign' +randomName)
 
         simpleCampaigns.selectCampaignItems().eq(1).click()
 

@@ -1,6 +1,11 @@
 class NamedFeature
 {
 
+  siteUrl()
+  {
+    return "https://qa.useriq.com/#/home"
+  }
+  
    namedFeatureLink()
    {
      return cy.get('[href="#/named_features"]')

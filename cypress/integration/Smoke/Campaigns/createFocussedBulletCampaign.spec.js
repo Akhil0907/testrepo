@@ -25,7 +25,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
 
     })
 
-    it('Smoke:-Create a simple focussed text campaign ', () => {
+    it('Smoke:-Create a focussed bullet campaign ', () => {
      
         const simpleCampaigns = new SimpleCampaigns()
         
@@ -36,17 +36,17 @@ describe('Verify the useriq web dashbord is working fine', () => {
 
         simpleCampaigns.getCreateCampaignButton().should('be.visible').click({force:true})
         
-        //selecting simple Focussed text only Announcement campaigns
+        //selecting Focussed bullet only Announcement campaigns
         simpleCampaigns.selectCampaign().eq(0).click()
 
-        simpleCampaigns.focussedText().should('be.visible').click()
+        simpleCampaigns.focussedBullets().should('be.visible').click()
         
         //content tab
 
         var randomstring = require("randomstring");
         var randomName = randomstring.generate(5);
 
-        simpleCampaigns.selectCampaignItems().eq(0).should('not.be.disabled').click().type('FocussedTextCampaign' +randomName)
+        simpleCampaigns.selectCampaignItems().eq(0).should('not.be.disabled').click().type('FocussedBulletCampaign' +randomName)
 
         simpleCampaigns.selectCampaignItems().eq(1).click()
 

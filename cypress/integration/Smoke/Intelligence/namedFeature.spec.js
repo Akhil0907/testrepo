@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
-import NamedFeature from '../../../pageObjects/regression/namedFeature'
-import WebuiNavLink from '../../../pageObjects/navUrl/navLinks'
-
+import NamedFeature from '../../../pageObjects/Intelligence/NamedFeature/namedFeature'
 
 describe('Verify the useriq web dashbord is working fine', () => {
     
@@ -27,7 +25,6 @@ describe('Verify the useriq web dashbord is working fine', () => {
     it('Verify Named Feature creation is working fine ', () => {
      
         const namedFeature = new NamedFeature
-        const webuiNavLink = new WebuiNavLink
 
         cy.url().should('include', '/#/home') 
         //navigating to creaating named feature 
@@ -64,7 +61,7 @@ describe('Verify the useriq web dashbord is working fine', () => {
        namedFeature.featureSelectionDropdown().click()
        cy.contains('pageview').trigger('mousemove').click()
        //Save the named feature
-       namedFeature.featureUrlInput().type(webuiNavLink.namedFeatureUrl())
+       namedFeature.featureUrlInput().type(namedFeature.siteUrl())
        namedFeature.saveNameFeatureButton().click();
     })
        
