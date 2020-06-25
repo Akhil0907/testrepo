@@ -3,13 +3,6 @@
   "version": "1.0.0",
   "description": "cypress e2e and smoke test scripts",
   "main": "index.js",
-  "dependencies": {
-    "cypress": "^4.7.0",
-    "randomstring": "^1.1.5"
-  },
-  "devDependencies": {
-    "cypress-xpath": "^1.6.0"
-  },
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
