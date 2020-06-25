@@ -43,10 +43,8 @@ describe('Verify the useriq web dashbord is working fine', () => {
         
         //content tab
 
-        var randomstring = require("randomstring");
-        var randomName = randomstring.generate(5);
 
-        simpleCampaigns.selectCampaignItems().eq(0).should('not.be.disabled').click().type('simpleCampaign' +randomName)
+        simpleCampaigns.selectCampaignItems().eq(0).should('not.be.disabled').click().type('simpleCampaign12')
 
         simpleCampaigns.selectCampaignItems().eq(1).click()
 
