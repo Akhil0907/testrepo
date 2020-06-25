@@ -10,6 +10,9 @@
     "smokeTest": "npm run test -- --spec cypress/integration/Smoke/**/*",
     "acceptanceTest": "npm run test -- --spec cypress/integration/Acceptance/**/*",
     "FunctionalTest": "npm run test -- --spec cypress/integration/Functional/**/*"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
