@@ -17,6 +17,14 @@
     "type": "git",
     "url": "git+https://github.com/Akhil0907/testrepo.git"
   },
+  {
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
+},
   "keywords": [
     "cypress"
   ],
